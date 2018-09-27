@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/MatchMatch.Vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="首页公告"/>
+
+    <!--<com.kotlin.message.widgets.NewsFlipperView-->
+            <!--android:id="@+id/mNewsFlipperView"-->
+            <!--style="@style/MatchWrap"-->
+            <!--android:layout_marginLeft="@dimen/common_margin_middle"-->
+            <!--android:layout_marginTop="@dimen/common_margin_small"-->
+            <!--android:layout_marginRight="@dimen/common_margin_middle"-->
+            <!--android:layout_marginBottom="@dimen/common_margin_small"/>-->
+
+    <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/mHomeDiscountRv"-->
+            <!--style="@style/commonRecyclerView"-->
+            <!--android:background="@color/common_white"-->
+            <!--android:paddingLeft="@dimen/common_padding"-->
+            <!--android:paddingRight="@dimen/common_padding"-->
+            <!--android:paddingBottom="@dimen/common_padding_small"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_width="match_parent"/>-->
+
+    <!--<me.crosswall.lib.coverflow.core.PagerContainer-->
+            <!--android:id="@+id/mTopicContainer"-->
+            <!--style="@style/MatchMatch"-->
+            <!--android:layout_height="match_content"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:background="@drawable/home_container_bg"-->
+            <!--&gt;-->
+        <!--<android.support.v4.view.ViewPager-->
+                <!--android:id="@+id/mTopicPager"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_width="200.0dip"-->
+                <!--android:layout_height="160.0dip"-->
+                <!--android:overScrollMode="never"/>-->
+    <!--</me.crosswall.lib.coverflow.core.PagerContainer>-->
+</LinearLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              style="@style/MatchMatch.Vertical.Common"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.yf.base.widgets.HeaderBar android:id="@+id/mHeaderBar"
+                                       app:titleText="点检项信息"
+                                       app:rightText="@string/common_save"
+                                       style="@style/MatchWrap"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="wrap_content"/>
+
+    <RelativeLayout style="@style/user_info_line_style"
+        >
+        <TextView android:text="设备名称"
+            style="@style/user_info_label_style"/>
+        <EditText android:id="@+id/mEquipName"
+            android:background="@null"
+            android:enabled="false"
+            android:maxLength="20"
+            style="@style/user_info_content_style"/>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/user_info_line_style">
+        <TextView android:text="设备编号"
+            style="@style/user_info_label_style"/>
+        <EditText android:id="@+id/mEquipNo"
+            android:background="@null"
+            android:enabled="false"
+            android:maxLength="20"
+            style="@style/user_info_content_style"/>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/user_info_line_style"
+        android:layout_marginTop="@dimen/common_margin">
+        <TextView android:text="点检项目"
+            style="@style/user_info_label_style"/>
+        <EditText android:id="@+id/mSpotItem"
+            android:background="@null"
+            android:enabled="false"
+            android:maxLength="15"
+            style="@style/user_info_content_style"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout style="@style/user_info_line_style">
+        <TextView android:text="正常范围"
+            style="@style/user_info_label_style"/>
+        <EditText android:id="@+id/mGeneryValue"
+            android:background="@null"
+            android:enabled="false"
+            android:maxLength="10"
+            style="@style/user_info_content_style"/>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/user_info_line_style">
+        <TextView android:text="点检值"
+                  style="@style/user_info_label_style"/>
+        <EditText android:id="@+id/mSpotValue"
+                  android:background="@null"
+                  android:hint="请填写"
+                  android:focusable="true"
+                  android:maxLength="10"
+                  style="@style/user_info_content_style"/>
+    </RelativeLayout>
+
+
+    <!--点检OKNG-->
+    <RelativeLayout style="@style/user_info_line_style">
+        <TextView android:text="点检结果"
+                  style="@style/user_info_label_style"/>
+
+        <RadioGroup android:orientation="horizontal"
+                    style="@style/WrapWrap"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content">
+
+            <RadioButton android:textSize="@dimen/text_middle_size"
+                         android:textColor="@drawable/task_text_selector"
+                         android:gravity="center"
+                         android:id="@+id/mOKRb"
+                         android:background="@drawable/task_bg_selector"
+                         android:layout_width="28.0dip"
+                         android:layout_height="28.0dip"
+                         android:layout_marginRight="@dimen/common_margin"
+
+                         android:button="@null"
+                         android:text="OK"/>
+            <RadioButton android:textSize="@dimen/text_middle_size"
+                         android:textColor="@drawable/task_text_selector"
+                         android:gravity="center"
+                         android:id="@+id/mNGRb"
+                         android:background="@drawable/task_bg_selector"
+                         android:layout_width="28.0dip"
+                         android:layout_height="28.0dip"
+                         android:button="@null"
+                         android:text="NG"/>
+        </RadioGroup>
+    </RelativeLayout>
+
+     <!--点检完图片-->
+    <RelativeLayout android:id="@+id/mEquipIcon"
+        android:layout_height="wrap_content"
+
+        style="@style/user_info_line_style"
+        android:paddingBottom="@dimen/common_padding_middle"
+        android:paddingTop="@dimen/common_padding_middle"
+        android:layout_width="match_parent">
+
+        <TextView android:text="图片"
+            style="@style/user_info_label_style"/>
+
+        <ImageView android:id="@+id/mArrowIv"
+            style="@style/WrapWrap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mEquipIconIv"
+            android:layout_width="@dimen/common_icon_width"
+            android:layout_height="@dimen/common_icon_height"
+            android:layout_marginRight="20.0dip"
+            android:src="@drawable/icon_default_user"
+            android:layout_toLeftOf="@id/mArrowIv"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+
+    <!--点检备注-->
+    <RelativeLayout style="@style/user_info_line_style">
+        <TextView android:text="备注"
+            style="@style/user_info_label_style"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+        <EditText android:id="@+id/mRemark"
+            android:background="@null"
+            android:hint="请填写备注"
+            android:inputType="textEmailAddress"
+            style="@style/user_info_content_style"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/mNextBtn"
+        style="@style/FullBtnStyle"
+        android:text="@string/common_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">远峰扫描工具</string>
+
+    <string name="un_login_text">登录/注册</string>
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              style="@style/MatchMatch.Vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.yf.base.widgets.HeaderBar
+            style="@style/MatchWrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleText="设置"/>
+
+    <TextView
+            android:id="@+id/mUserProtocolTv"
+            style="@style/SettingItemStyle"
+            android:text="用户"/>
+    <TextView
+            android:id="@+id/mFeedBackTv"
+            style="@style/SettingItemStyle"
+            android:text="意见"/>
+    <TextView
+            android:id="@+id/mAboutTv"
+            style="@style/SettingItemStyle"
+            android:text="关于"/>
+    <Button
+            android:id="@+id/mLogoutBtn"
+            android:text="退出登录"
+            style="@style/FullBtnStyle"
+            android:enabled="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    />
+</LinearLayout>
