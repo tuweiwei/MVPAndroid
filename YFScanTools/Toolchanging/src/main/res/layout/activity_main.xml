@@ -8,17 +8,15 @@
 
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="机型:"/>
             <EditText android:id="@+id/mMachineEt"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/common_line_height"
@@ -26,10 +24,6 @@
                 android:paddingLeft="@dimen/common_padding_small"
                 android:hint="请输入机型"
                 android:drawablePadding="@dimen/common_padding_small" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="编号:"/>
             <EditText android:id="@+id/mMillingNoEt"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/common_line_height"
@@ -64,6 +58,7 @@
                 android:text="更换前切割距离:"/>
             <Spinner
                 android:id="@+id/mDistanceSp"
+                android:height="80dp"
                 android:entries="@array/spingarr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"></Spinner>
@@ -74,24 +69,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="更换人" />
             <EditText
                 android:id="@+id/mUserEt"
+                android:hint="更换人"
+                android:height="80dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:width="100dp"/>
 
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="换刀验证PCB记录"/>
             <EditText
                 android:id="@+id/mPcbEt"
+                android:hint="换刀验证PCB记录"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:width="100dp"/>
@@ -110,7 +98,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="机型：" />
+                android:text="查询机型：" />
 
             <EditText
                 android:id="@+id/mScanMaterialNoEt"
@@ -126,15 +114,79 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/mMillingRv"
-            style="@style/commonRecyclerView"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/WrapWrap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin_middle"
+                android:text="机型"/>
+
+
+             <TextView
+                style="@style/WrapWrap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:layout_marginLeft="@dimen/common_margin_middle"
+                android:maxLines="1"
+                android:text="铣刀编号"/>
+
+            <TextView
+                style="@style/WrapWrap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="有效切割寿命"/>
+
+            <TextView
+                style="@style/WrapWrap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin_middle"
+                android:text="更换前切割距离"/>
+
+            <TextView
+                style="@style/WrapWrap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_margin_middle"
+                android:text="更换人"/>
+
+            <TextView
+                style="@style/WrapWrap"
+                android:layout_marginLeft="@dimen/common_margin_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="换刀验证PCB记录"/>
+
+            <TextView
+                style="@style/WrapWrap"
+                android:layout_marginLeft="@dimen/common_margin_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时间"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mMillingRv"
+                style="@style/commonRecyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 
     </LinearLayout>
+
     <!--<fragment-->
         <!--android:id="@+id/left_fragment"-->
         <!--android:name="com.yf.milling.ui.fragment.LeftMenuFragment"-->
