@@ -1,1 +1,1 @@
-include ':App', ':BaseLibrary', ':Provider', ':UserCenter', ':MidMes', ':SpareManager', ':Tidmodule', ':SpotInspectModule', ':MessageCenter'
+include ':App', ':BaseLibrary', ':Provider', ':UserCenter', ':Tidmodule', ':MessageCenter', ':Toolchanging'

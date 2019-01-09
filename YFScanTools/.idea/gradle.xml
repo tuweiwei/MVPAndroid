@@ -11,11 +11,9 @@
             <option value="$PROJECT_DIR$/App" />
             <option value="$PROJECT_DIR$/BaseLibrary" />
             <option value="$PROJECT_DIR$/MessageCenter" />
-            <option value="$PROJECT_DIR$/MidMes" />
             <option value="$PROJECT_DIR$/Provider" />
-            <option value="$PROJECT_DIR$/SpareManager" />
-            <option value="$PROJECT_DIR$/SpotInspectModule" />
             <option value="$PROJECT_DIR$/Tidmodule" />
+            <option value="$PROJECT_DIR$/Toolchanging" />
             <option value="$PROJECT_DIR$/UserCenter" />
           </set>
         </option>

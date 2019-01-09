@@ -1,0 +1,13 @@
+<resources>
+    <string-array name="spingarr">
+        <item>10M</item>
+        <item>15M</item>
+        <item>20M</item>
+        <item>25M</item>
+        <item>30M</item>
+        <item>35M</item>
+        <item>40M</item>
+        <item>45M</item>
+        <item>50M</item>
+    </string-array>
+</resources>

@@ -9,7 +9,7 @@ import com.yf.base.common.AppManager
 import org.jetbrains.anko.find
 
 /*
-    Activity基类，业务无关
+    Activity基类,业务无关
  */
 open class BaseActivity: RxAppCompatActivity() {
 

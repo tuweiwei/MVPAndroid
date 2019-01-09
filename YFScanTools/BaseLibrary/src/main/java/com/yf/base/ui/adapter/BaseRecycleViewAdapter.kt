@@ -30,6 +30,10 @@ abstract class BaseRecycleViewAdapter<T, VH : RecyclerView.ViewHolder>(var mCont
         return dataList.size
     }
 
+    fun setOnItemClickListener(listener: OnItemClickListener<T>) {
+        this.mItemClickListener = listener
+    }
+
     /*
         ItemClick事件声明
      */
@@ -37,7 +41,5 @@ abstract class BaseRecycleViewAdapter<T, VH : RecyclerView.ViewHolder>(var mCont
         fun onItemClick(item: T, position: Int)
     }
 
-    fun setOnItemClickListener(listener: OnItemClickListener<T>) {
-        this.mItemClickListener = listener
-    }
+
 }

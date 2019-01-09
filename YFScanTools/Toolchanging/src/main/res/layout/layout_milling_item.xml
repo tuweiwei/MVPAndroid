@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--<TextView-->
+        <!--style="@style/WrapWrap"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/common_margin_middle"-->
+        <!--android:text="机型"/>-->
+    <!--<TextView-->
+
+        <!--style="@style/WrapWrap"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:ellipsize="end"-->
+        <!--android:layout_marginLeft="@dimen/common_margin_middle"-->
+        <!--android:maxLines="1"-->
+        <!--android:text="铣刀编号"/>-->
+    <!--<TextView-->
+
+        <!--style="@style/WrapWrap"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="@dimen/text_small_size"-->
+        <!--android:text="有效切割寿命"/>-->
+
+    <!--<TextView-->
+
+        <!--style="@style/WrapWrap"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="@dimen/text_big_size"-->
+        <!--android:layout_marginLeft="@dimen/common_margin_middle"-->
+        <!--android:text="更换前切割距离"/>-->
+    <!--<TextView-->
+
+        <!--style="@style/WrapWrap"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:ellipsize="end"-->
+        <!--android:layout_marginLeft="@dimen/common_margin_middle"-->
+        <!--android:maxLines="1"-->
+        <!--android:text="更换人"/>-->
+
+    <!--<TextView-->
+        <!--style="@style/WrapWrap"-->
+        <!--android:layout_marginLeft="@dimen/common_margin_middle"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="换刀验证PCB记录"/>-->
+
+    <!--<TextView-->
+        <!--style="@style/WrapWrap"-->
+        <!--android:layout_marginLeft="@dimen/common_margin_middle"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="时间"/>-->
+
+
+    <TextView
+        android:id="@+id/mMaterialNoTv"
+        style="@style/WrapWrap"
+        android:layout_marginLeft="@dimen/common_margin_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/mToolNoTv"
+        style="@style/WrapWrap"
+        android:layout_marginLeft="@dimen/common_margin_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/mAgeTv"
+        style="@style/WrapWrap"
+        android:layout_marginLeft="@dimen/common_margin_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/mDistanceTv"
+        style="@style/WrapWrap"
+        android:layout_marginLeft="@dimen/common_margin_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/mUserTv"
+        style="@style/WrapWrap"
+        android:layout_marginLeft="@dimen/common_margin_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/mCreateTimeTv"
+        style="@style/WrapWrap"
+        android:layout_marginLeft="@dimen/common_margin_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
