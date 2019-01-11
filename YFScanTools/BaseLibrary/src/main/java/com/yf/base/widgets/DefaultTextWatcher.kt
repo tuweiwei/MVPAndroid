@@ -4,7 +4,7 @@ import android.text.Editable
 import android.text.TextWatcher
 
 //默认textWatcher实现
-open class DefaultTextWatcher:TextWatcher {
+open class DefaultTextWatcher(function: () -> kotlin.Unit) :TextWatcher {
     override fun afterTextChanged(p0: Editable?) {
     }
 

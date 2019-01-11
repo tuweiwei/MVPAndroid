@@ -41,10 +41,10 @@ dependencies {
 
     compile project(':Provider')
 
-    compile project(':MessageCenter')
-    if (isUserModule.toBoolean()){
-        compile project(':UserCenter')
-    }
+    compile project(':Toolchanging')
+//    if (isUserModule.toBoolean()){
+//        compile project(':UserCenter')
+//    }
 }
 repositories {
     mavenCentral()

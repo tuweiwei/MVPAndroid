@@ -7,7 +7,8 @@ import rx.Observable
 interface MillingService {
 
     //fun uploadData(username:String,password:String): Observable<Boolean>
-    fun uploadData(millingMaterialno:String,millingToolno:String,millingAge:String,millingDistance:String,millingUser:String,millingPcb:String): Observable<MillingInfo>
+    fun uploadData(millingMaterialno:String,millingToolno:String,millingAge:String,millingDistance:String,millingUser:String,millingPcb:String): Observable<MutableList<MillingInfo>>
     fun queryData(code:String):Observable<MillingInfo>
     fun queryByMaterialData(code:String):Observable<MutableList<MillingInfo>>
+    fun queryLastThirtyData(): Observable<MutableList<MillingInfo>>
 }

@@ -22,8 +22,8 @@ class UploadDataPresenter @Inject constructor() :BasePresenter<UploadDataView>()
         }
         mView.showLoading()
 
-        millingService.uploadData(millingMaterialno,millingToolno,millingAge,millingDistance,millingUser,millingPcb).excute(object : BaseSubscriber<MillingInfo>(mView) {
-            override fun onNext(t: MillingInfo) {
+        millingService.uploadData(millingMaterialno,millingToolno,millingAge,millingDistance,millingUser,millingPcb).excute(object : BaseSubscriber<MutableList<MillingInfo>>(mView) {
+            override fun onNext(t: MutableList<MillingInfo>) {
                 mView.onUploadResult(t)
             }
         }, lifecycleProvider)
@@ -39,6 +39,20 @@ class UploadDataPresenter @Inject constructor() :BasePresenter<UploadDataView>()
         millingService.queryByMaterialData(millingMaterialno).excute(object : BaseSubscriber<MutableList<MillingInfo>>(mView) {
             override fun onNext(t: MutableList<MillingInfo>) {
                 mView.onQueryByMaterialResult(t)
+            }
+        }, lifecycleProvider)
+    }
+
+    fun queryLastThirtyData(){
+
+        if (!checkNetWork()) {
+            return
+        }
+        mView.showLoading()
+
+        millingService.queryLastThirtyData().excute(object : BaseSubscriber<MutableList<MillingInfo>>(mView) {
+            override fun onNext(t: MutableList<MillingInfo>) {
+                mView.onQueryThiryResult(t)
             }
         }, lifecycleProvider)
     }

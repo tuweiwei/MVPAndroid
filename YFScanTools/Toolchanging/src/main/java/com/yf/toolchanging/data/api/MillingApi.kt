@@ -16,7 +16,7 @@ interface MillingApi {
         上传数据
      */
     @POST("millingCenter/uploadMillingRecord")
-    fun uploadData(@Body req: UploadReq):Observable<BaseResp<MillingInfo>>
+    fun uploadData(@Body req: UploadReq):Observable<BaseResp<MutableList<MillingInfo>>>
 
     /*
         查询数据
@@ -26,8 +26,14 @@ interface MillingApi {
 
     /*
      查询数据
-  */
+    */
     @POST("millingCenter/queryByMaterial")
     fun queryDataByMaterial(@Body req: QueryByMaterialReq): Observable<BaseResp<MutableList<MillingInfo>>>
+
+    /*
+     查询数据
+    */
+    @POST("millingCenter/queryLastThirty")
+    fun queryLastThirty(): Observable<BaseResp<MutableList<MillingInfo>>>
 
 }

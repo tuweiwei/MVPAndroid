@@ -3,11 +3,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:name="com.yf.base.common.BaseApplication">
+        android:theme="@style/AppTheme">
 
         <!--后期采用开始可以先 直接进入程序 浏览相关程序   设备 或者 工单信息， 但是进行扫描生产时需强制扫描工号
               现在主工程为空    直接启用用户中心登录   登录后进入 相应功能模块
@@ -22,11 +19,11 @@
         <!--</activity>-->
 
         <activity android:name="com.yf.milling.ui.activity.UploadDataActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
     </application>
 </manifest>

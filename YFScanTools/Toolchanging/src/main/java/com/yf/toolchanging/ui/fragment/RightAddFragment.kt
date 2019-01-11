@@ -23,6 +23,13 @@ import org.jetbrains.anko.support.v4.toast
 
 
 class RightAddFragment : BaseMvpFragment<UploadDataPresenter>(), UploadDataView, View.OnClickListener {
+    override fun onQueryThiryResult(t: MutableList<MillingInfo>) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun onUploadResult(result: MutableList<MillingInfo>) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
     private lateinit var mAdapter: MillingToolAdapter
     private var mUserName:String? = null
@@ -47,10 +54,7 @@ class RightAddFragment : BaseMvpFragment<UploadDataPresenter>(), UploadDataView,
 
     }
 
-    override fun onUploadResult(result: MillingInfo) {
-        toast("上传成功")
-        //UserPrefsUtils.putUserInfo(result)
-    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

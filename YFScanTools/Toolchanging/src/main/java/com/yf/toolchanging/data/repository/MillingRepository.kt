@@ -14,7 +14,7 @@ import javax.inject.Inject
 //数据层
 class MillingRepository @Inject constructor() {
 
-    fun uploadData(millingMaterialno:String,millingToolno:String,millingAge:String,millingDistance:String,millingUser:String,millingPcb:String ): Observable<BaseResp<MillingInfo>>{
+    fun uploadData(millingMaterialno:String,millingToolno:String,millingAge:String,millingDistance:String,millingUser:String,millingPcb:String ): Observable<BaseResp<MutableList<MillingInfo>>>{
         return RetrofitFactory.instance.create(MillingApi::class.java).uploadData(UploadReq(millingMaterialno,millingToolno,millingAge,millingDistance,millingUser,millingPcb))
     }
 
@@ -24,5 +24,9 @@ class MillingRepository @Inject constructor() {
 
     fun queryByMaterialData(millingMaterialno:String): Observable<BaseResp<MutableList<MillingInfo>>>{
         return RetrofitFactory.instance.create(MillingApi::class.java).queryDataByMaterial(QueryByMaterialReq(millingMaterialno))
+    }
+
+    fun queryLastThirtyData(): Observable<BaseResp<MutableList<MillingInfo>>> {
+        return RetrofitFactory.instance.create(MillingApi::class.java).queryLastThirty()
     }
 }

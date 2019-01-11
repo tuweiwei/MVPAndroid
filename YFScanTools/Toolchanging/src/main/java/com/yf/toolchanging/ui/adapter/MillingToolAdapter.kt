@@ -2,6 +2,7 @@ package com.yf.milling.ui.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,8 @@ import com.yf.base.ui.adapter.BaseRecycleViewAdapter
 import com.yf.milling.data.protocol.MillingInfo
 import com.yf.toolchanging.R
 import kotlinx.android.synthetic.main.layout_milling_item.view.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MillingToolAdapter(context: Context): BaseRecycleViewAdapter<MillingInfo,
         MillingToolAdapter.ViewHolder>(context) {
@@ -36,9 +39,11 @@ class MillingToolAdapter(context: Context): BaseRecycleViewAdapter<MillingInfo,
         holder.itemView.mAgeTv.text = model.millingAge
         holder.itemView.mDistanceTv.text = model.millingDistance
         holder.itemView.mUserTv.text = model.millingUser
+        holder.itemView.mPcbTv.text = model.millingPcb
         holder.itemView.mCreateTimeTv.text = model.millingCreatedate
 
-    }
+
+}
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view)
 }

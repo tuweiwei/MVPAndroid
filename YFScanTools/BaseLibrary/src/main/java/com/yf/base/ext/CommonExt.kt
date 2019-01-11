@@ -67,7 +67,21 @@ fun View.onClick(method:() -> Unit):View{
  */
 fun Button.enable(et: EditText, method: () -> Boolean){
     val btn = this
-    et.addTextChangedListener(object : DefaultTextWatcher(){
+    et.addTextChangedListener(object : DefaultTextWatcher({
+
+        //            @Override
+    //            public void onTextChanged(CharSequence arg0, int start, int before, int count) {
+    //
+    //
+    //                if (str.endsWith("\n")) {
+    //                    String str1 = str . substring (0, Len-1);
+    //                    int iPos = str1 . lastIndexOf ("\n");
+    //                    String strBuff = "";
+    //                    if (-1 == iPos) {
+    //                    }
+    //                }
+    //            }
+    }) {
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
             btn.isEnabled = method()
         }

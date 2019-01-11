@@ -11,10 +11,15 @@ import javax.inject.Inject
 //提供注入
 class MillingServiceImpl @Inject constructor() : MillingService {
 
+
     @Inject
     lateinit var userRepository: MillingRepository
 
-    override fun uploadData(millingMaterialno:String,millingToolno:String,millingAge:String,millingDistance:String,millingUser:String,millingPcb:String): Observable<MillingInfo> {
+    override fun queryLastThirtyData(): Observable<MutableList<MillingInfo>> {
+        return userRepository.queryLastThirtyData().convert()
+
+    }
+    override fun uploadData(millingMaterialno:String,millingToolno:String,millingAge:String,millingDistance:String,millingUser:String,millingPcb:String): Observable<MutableList<MillingInfo>> {
 
          return userRepository.uploadData(millingMaterialno,millingToolno,millingAge,millingDistance,millingUser,millingPcb).convert()
     }
